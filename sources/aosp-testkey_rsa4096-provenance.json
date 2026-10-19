@@ -1,0 +1,12 @@
+{
+  "retrieved_date": "2026-10-19",
+  "repository": "https://android.googlesource.com/platform/external/avb",
+  "remote_ref": "refs/heads/main",
+  "commit": "761178607206f4cb2af79ed9eec52d8cbd814adb",
+  "path": "test/data/testkey_rsa4096.pem",
+  "git_blob_sha1": "26db5c3c06ee75de106e07ca47d7b26d7a1d7c6a",
+  "file_sha256": "6a224754880a57ab9cbd308267cd157d94cf05a1c8cb851aec4090e045d24121",
+  "download_url": "https://android.googlesource.com/platform/external/avb/+/761178607206f4cb2af79ed9eec52d8cbd814adb/test/data/testkey_rsa4096.pem?format=TEXT",
+  "purpose": "Public AOSP AVB test key referenced by guosasipo meizu21Pro BoardConfig; trust must be checked against the actual backup boot image"
+}
+

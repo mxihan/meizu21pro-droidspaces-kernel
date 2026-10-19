@@ -1,0 +1,253 @@
+{
+  "stock_boot": "<workspace>/output/droidspaces-20261019/device-baseline-v1/boot_b.img",
+  "raw_kernel_sha256": "8cac3762600e55c59df56bf41682e62f129176808ecf76689ba22e857e9847d5",
+  "certificate_offset_in_raw_kernel": 33361152,
+  "certificate_size": 1324,
+  "certificate_sha256": "2b109cb2af82cbff5831331680a0108097a69fa5d1d88723e4c3cd0a2e225d89",
+  "certificate_der": "<workspace>/output/droidspaces-20261019/verification/stock-module-signing.x509",
+  "certificate_pem": "<workspace>/output/droidspaces-20261019/verification/stock-module-signing.pem",
+  "module_directory": "<workspace>/output/droidspaces-20261019/device-baseline-v1/system_dlkm-modules",
+  "modules_checked": 59,
+  "signatures_verified": 59,
+  "failures": [],
+  "verification": "openssl cms -verify -binary -inform DER -certfile stock-module-signing.pem -nointern -noverify",
+  "results": [
+    {
+      "module": "android17-6.1/6lowpan.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/8021q.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/aqc111.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/asix.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/ax88179_178a.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/bluetooth.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/bsd_comp.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/btbcm.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/btqca.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/btsdio.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/can-bcm.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/can-dev.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/can-gw.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/can-raw.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/can.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/cdc-acm.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/cdc_eem.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/cdc_ether.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/cdc_ncm.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/diag.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/ftdi_sio.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/hci_uart.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/hidp.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/ieee802154.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/ieee802154_6lowpan.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/ieee802154_socket.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/kheaders.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/l2tp_core.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/l2tp_ppp.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/libarc4.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/mac802154.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/mii.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/nfc.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/nhc_dest.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/nhc_fragment.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/nhc_hop.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/nhc_ipv6.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/nhc_mobility.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/nhc_routing.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/nhc_udp.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/ppp_deflate.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/ppp_generic.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/ppp_mppe.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/pppox.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/pptp.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/r8152.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/r8153_ecm.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/rfcomm.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/rfkill.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/rtl8150.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/slcan.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/slhc.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/tipc.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/usbnet.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/usbserial.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/vcan.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/wwan.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/zram.ko",
+      "verified": true
+    },
+    {
+      "module": "android17-6.1/zsmalloc.ko",
+      "verified": true
+    }
+  ]
+}
+

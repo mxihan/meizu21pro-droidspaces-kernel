@@ -1,0 +1,28 @@
+{
+  "stock_boot_sha256": "212eeb09381352405db3012b9adc268cae6fcc75b777f474be7f0a583386776d",
+  "stock_reproduction_sha256": "212eeb09381352405db3012b9adc268cae6fcc75b777f474be7f0a583386776d",
+  "stock_reproduction_identical": true,
+  "partition_size": 100663296,
+  "avb_tool_version": "avbtool 1.4.0",
+  "avb_tool_sha256": "72e5fa043f7627a6d1c60d3ea37f22b1f5e0a4affc208372990e9007020b704b",
+  "public_test_key_source_sha256": "6a224754880a57ab9cbd308267cd157d94cf05a1c8cb851aec4090e045d24121",
+  "avb_public_key_sha1": "2597c218aae470a130f61162feaae70afd97f011",
+  "algorithm": "SHA256_RSA4096",
+  "rollback_index": 1788220800,
+  "rollback_index_location": 0,
+  "flags": 0,
+  "props": {
+    "com.android.build.boot.os_version": "17",
+    "com.android.build.boot.fingerprint": "meizu/custom_meizu21Pro/meizu21Pro:17/CP2A.260605.016/eng.guosas:userdebug/test-keys",
+    "com.android.build.boot.security_patch": "2026-09-01"
+  },
+  "salt": "8cac3762600e55c59df56bf41682e62f129176808ecf76689ba22e857e9847d5",
+  "candidate_file": "boot-droidspaces-meizu21pro-avb.img",
+  "candidate_boot_sha256": "eab3f1d4ea2da3df4623ec44292cadf9c511821aeea14647bdaf12959ac3b006",
+  "kernel_size": 35981824,
+  "kernel_sha256": "7f8d7ed65ef5a636c11b952bbcdb534d7bf84cff6ffd17504b3e9fc27fb8a6d1",
+  "header_preserved_except_kernel_size": true,
+  "candidate_avb_verified": true,
+  "candidate_boot_tested": false
+}
+

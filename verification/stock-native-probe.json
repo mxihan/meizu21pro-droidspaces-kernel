@@ -1,0 +1,7 @@
+{
+  "scope": "Current original kernel; this is the expected failing feature baseline, not a candidate boot test",
+  "exit_code": 1,
+  "probe_sha256": "ff2d008fa487391039bb6b3e6e8990f02a8e2455cfa8470137d104582b103a36",
+  "stdout": "kernel_probe aarch64 v1 isolated_syscall_smoke\nFAIL pid_namespace operation=read_original_namespace errno=2 (No such file or directory)\nFAIL pid_namespace\nFAIL sysvipc_msg operation=msgget errno=38 (Function not implemented)\nFAIL sysvipc_shm operation=shmget errno=38 (Function not implemented)\nFAIL sysvipc_sem operation=semget errno=38 (Function not implemented)\nFAIL sysvipc_newipc\nFAIL user_namespace operation=read_original_namespace errno=2 (No such file or directory)\nFAIL user_namespace\nPASS net_namespace\nPASS mount_namespace\nPASS seccomp_filter\nFAIL devtmpfs_registered operation=filesystem_not_registered errno=19 (No such device)\nFAIL devtmpfs_registered\nSUMMARY tests=7 passed=3 failed=4\n",
+  "stderr": ""
+}

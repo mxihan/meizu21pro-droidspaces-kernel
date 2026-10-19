@@ -1,0 +1,6 @@
+*.img binary
+artifacts/Image binary
+artifacts/boot-droidspaces-meizu21pro-avb.img binary
+artifacts/* linguist-generated
+scripts/*.patch linguist-language=Diff
+

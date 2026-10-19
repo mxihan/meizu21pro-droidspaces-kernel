@@ -1,0 +1,11 @@
+{
+  "retrieved_date": "2026-10-19",
+  "repository": "https://android.googlesource.com/platform/external/avb",
+  "remote_ref": "refs/heads/android17-release",
+  "commit": "ba2dec4b035b0a3b61c5f8f8a74d86bcd450b1ee",
+  "path": "avbtool.py",
+  "git_blob_sha1": "c0f3c7c62c4121edca58727ae60e17818d46155c",
+  "file_sha256": "1aa6f2b462aa67aa3fdf488bee83ab517de8ad9d8228c7b45c35267ab2cf6781",
+  "download_url": "https://android.googlesource.com/platform/external/avb/+/ba2dec4b035b0a3b61c5f8f8a74d86bcd450b1ee/avbtool.py?format=TEXT"
+}
+

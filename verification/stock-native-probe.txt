@@ -1,0 +1,16 @@
+kernel_probe aarch64 v1 isolated_syscall_smoke
+FAIL pid_namespace operation=read_original_namespace errno=2 (No such file or directory)
+FAIL pid_namespace
+FAIL sysvipc_msg operation=msgget errno=38 (Function not implemented)
+FAIL sysvipc_shm operation=shmget errno=38 (Function not implemented)
+FAIL sysvipc_sem operation=semget errno=38 (Function not implemented)
+FAIL sysvipc_newipc
+FAIL user_namespace operation=read_original_namespace errno=2 (No such file or directory)
+FAIL user_namespace
+PASS net_namespace
+PASS mount_namespace
+PASS seccomp_filter
+FAIL devtmpfs_registered operation=filesystem_not_registered errno=19 (No such device)
+FAIL devtmpfs_registered
+SUMMARY tests=7 passed=3 failed=4
+

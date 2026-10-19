@@ -1,0 +1,28 @@
+Footer version:           1.0
+Image size:               100663296 bytes
+Original image size:      35987456 bytes
+VBMeta offset:            35987456
+VBMeta size:              2432 bytes
+--
+Minimum libavb version:   1.0
+Header Block:             256 bytes
+Authentication Block:     576 bytes
+Auxiliary Block:          1600 bytes
+Public key (sha1):        2597c218aae470a130f61162feaae70afd97f011
+Algorithm:                SHA256_RSA4096
+Rollback Index:           1788220800
+Flags:                    0
+Rollback Index Location:  0
+Release String:           'avbtool 1.4.0'
+Descriptors:
+    Hash descriptor:
+      Image Size:            35987456 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        boot
+      Salt:                  8cac3762600e55c59df56bf41682e62f129176808ecf76689ba22e857e9847d5
+      Digest:                f379cda4b106eb56ff9b5844bc62ea409289bb1541ac17b30473752cb396e219
+      Flags:                 0
+    Prop: com.android.build.boot.os_version -> '17'
+    Prop: com.android.build.boot.fingerprint -> 'meizu/custom_meizu21Pro/meizu21Pro:17/CP2A.260605.016/eng.guosas:userdebug/test-keys'
+    Prop: com.android.build.boot.security_patch -> '2026-09-01'
+

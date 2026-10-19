@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "checks": {
+    "kernel_is_arm64_Image": true,
+    "kernel_release_preserved": true,
+    "candidate_banner_is_distinct": true,
+    "config_extracted_from_Image_matches_delivered_config": true,
+    "stock_public_certificate_embedded_once": true,
+    "stock_public_certificate_hash_matches": true,
+    "stock_certificate_in_generated_trust_list": true,
+    "boot_partition_size_preserved": true,
+    "boot_header_version_4": true,
+    "boot_has_AVB_footer": true,
+    "boot_kernel_matches_delivered_Image": true,
+    "no_DSDBG_instrumentation": true,
+    "no_optional_seccomp_probe_instrumentation": true,
+    "114_requested_config_symbols_pass": true,
+    "59_original_system_module_signatures_validated": true,
+    "original_signed_boot_reproduced_exactly": true,
+    "candidate_AVB_verified": true,
+    "candidate_hash_matches_verified_AVB_artifact": true,
+    "449_module_ABI_check_passed": true,
+    "ABI_report_matches_delivered_symvers": true,
+    "selected_BTF_layout_checks_passed": true,
+    "BTF_report_matches_delivered_config": true
+  },
+  "kernel_sha256": "7f8d7ed65ef5a636c11b952bbcdb534d7bf84cff6ffd17504b3e9fc27fb8a6d1",
+  "boot_sha256": "eab3f1d4ea2da3df4623ec44292cadf9c511821aeea14647bdaf12959ac3b006",
+  "kernel_config_sha256": "1925ea418e50b96bcb06eeb94bdd5a9ba71c20fa694574ee66e5cc2801bac529",
+  "boot_tested": false,
+  "container_tested": false,
+  "scope": "Build, cryptographic, all captured module symbol ABI and selected BTF layout verification. Real boot and container operation remain untested."
+}
+

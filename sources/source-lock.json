@@ -1,0 +1,21 @@
+{
+  "kernel_repository": "https://github.com/meizu-8650-kernel/android_kernel_meizu_sm8650",
+  "kernel_commit": "19e9b13339e26612844b620c2bdd54228dc6d836",
+  "droidspaces_reference_commit": "8b625e110270e2f0d32004f740b1e9a71b1f540c",
+  "frozen_fragment_sha256": "9ea33bfe8dbb102b6e135bcf6b3f1274d0fd930f0c57f9ba11b1d211c144ddb3",
+  "clang": "Android 22.0.2 r596125, build 15071444, llvm-project de03d430485c884861198b25459851f429cbdbad",
+  "clang_binary_sha256": "b50deb7c48633d03c02b15b6508d79768027e80422265d7a4a7f2f13d2f01d97",
+  "kernel_release": "6.1.176-g19e9b13339e2",
+  "scmversion_file": "-g19e9b13339e2",
+  "build_timestamp": "Mon Oct 19 10:00:00 UTC 2026",
+  "modifications": [
+    "SYSVIPC KABI slots 6/7/8 patch",
+    "frozen config fragment",
+    "original public module certificate in SYSTEM_TRUSTED_KEYS",
+    "fixed .scmversion for existing module release"
+  ],
+  "build_source_path": "<local-kernel-source>",
+  "build_output_path": "<local-build-output>",
+  "boot_tested": false,
+  "container_tested": false
+}

@@ -1,0 +1,32 @@
+# Generated and local files
+.git/
+*.log
+*.tmp
+*.bak
+__pycache__/
+.pytest_cache/
+
+# Device data and private/local material
+9008-backup/
+output/
+out/
+*.qcow2
+*.vmpkg
+*.zip
+*.apk
+*.img
+*.ko
+*.a
+*.o
+*.bin
+*.pem
+
+# The curated public artifacts are explicitly re-included below.
+!artifacts/
+!artifacts/boot-droidspaces-meizu21pro-avb.img
+!artifacts/Image
+!artifacts/kernel.config
+!artifacts/SHA256SUMS.txt
+!verification/stock-module-signing.pem
+!verification/stock-module-signing.x509
+

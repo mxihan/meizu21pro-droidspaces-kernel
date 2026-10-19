@@ -1,0 +1,4 @@
+Verifying image /tmp/droidspaces-avb-verify-zhbw42g9/boot.img using key at <workspace>/sources/meizu21pro-kernel-reference/aosp-testkey_rsa4096.pem
+vbmeta: Successfully verified footer and SHA256_RSA4096 vbmeta struct in /tmp/droidspaces-avb-verify-zhbw42g9/boot.img
+boot: Successfully verified sha256 hash of /tmp/droidspaces-avb-verify-zhbw42g9/boot.img for image of 35651584 bytes
+

@@ -1,0 +1,93 @@
+[
+  {
+    "symbol": "CONFIG_SYSVIPC",
+    "stock": "n",
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_PID_NS",
+    "stock": "n",
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_FHANDLE",
+    "stock": "n",
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_DEVTMPFS",
+    "stock": "n",
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_TMPFS_POSIX_ACL",
+    "stock": "n",
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_TMPFS_XATTR",
+    "stock": "n",
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_AUTOFS_FS",
+    "stock": "n",
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_USER_NS",
+    "stock": "n",
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_NETFILTER_XT_MATCH_ADDRTYPE",
+    "stock": "n",
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_IP6_NF_NAT",
+    "stock": "n",
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_IP6_NF_TARGET_MASQUERADE",
+    "stock": null,
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_MACVLAN",
+    "stock": "n",
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_NETFILTER_XT_MATCH_RECENT",
+    "stock": "n",
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_NETFILTER_XT_TARGET_LOG",
+    "stock": "n",
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_IP_SET",
+    "stock": "n",
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_IP_SET_HASH_IP",
+    "stock": null,
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_IP_SET_HASH_NET",
+    "stock": null,
+    "requested": "y"
+  },
+  {
+    "symbol": "CONFIG_NETFILTER_XT_SET",
+    "stock": null,
+    "requested": "y"
+  }
+]
+

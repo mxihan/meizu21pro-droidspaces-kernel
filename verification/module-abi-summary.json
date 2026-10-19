@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-19T18:30:38.101412+08:00",
+  "scope": "Symbol CRCs, import/export resolution, full vermagic and duplicate file identity; does not prove boot, CFI type IDs, structure layout, signature trust or load order.",
+  "expected_vermagic": "6.1.176-g19e9b13339e2 SMP preempt mod_unload modversions aarch64",
+  "core": {
+    "path": "<build-root>/out/vmlinux.symvers",
+    "sha256": "4046401c08ac81d5d42207185880c1a0b024d5806b7f7c2ad082a1971112a304",
+    "exports": 15660
+  },
+  "module_roots_file_count": [
+    {
+      "file_count": 390
+    },
+    {
+      "file_count": 59
+    }
+  ],
+  "errors": [],
+  "duplicate_names": [],
+  "export_provider_collisions": {},
+  "vermagic_distribution": {
+    "6.1.176-g19e9b13339e2 SMP preempt mod_unload modversions aarch64": 449
+  },
+  "summary": {
+    "input_files": 449,
+    "unique_file_name_and_hash": 449,
+    "unique_module_names": 449,
+    "duplicate_file_names": 0,
+    "different_hash_duplicate_names": 0,
+    "modules_parsed": 449,
+    "core_exports": 15660,
+    "module_exports": 4346,
+    "unique_module_export_symbols": 4346,
+    "version_records": 25248,
+    "import_resolution": {
+      "core_match": 22162,
+      "module_match": 3086
+    },
+    "unresolved_symbols": 0,
+    "error_groups": 0
+  },
+  "passed": true
+}
+

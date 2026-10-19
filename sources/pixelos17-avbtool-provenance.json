@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/PixelOS-AOSP/android_external_avb",
+  "commit": "15b4e85b56cdd7e32601074dbb269f5d3ba43eaf",
+  "path": "avbtool.py",
+  "file_sha256": "72e5fa043f7627a6d1c60d3ea37f22b1f5e0a4affc208372990e9007020b704b"
+}
+

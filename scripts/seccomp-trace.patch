@@ -1,0 +1,35 @@
+diff --git a/kernel/seccomp.c b/kernel/seccomp.c
+--- a/kernel/seccomp.c
++++ b/kernel/seccomp.c
+@@ -22,6 +22,7 @@
+ #include <linux/kmemleak.h>
+ #include <linux/nospec.h>
+ #include <linux/prctl.h>
++#include <linux/ratelimit.h>
+ #include <linux/sched.h>
+ #include <linux/sched/task_stack.h>
+ #include <linux/seccomp.h>
+@@ -1219,6 +1220,10 @@ static int __seccomp_filter(int this_syscall, const struct seccomp_data *sd,
+ 		goto skip;
+ 
+ 	case SECCOMP_RET_TRAP:
++		pr_warn_ratelimited("DSDBG_SECCOMP: nr=%d arch=0x%x action=0x%x pid=%d comm=%s\n",
++				    sd->nr, sd->arch, action,
++				    task_pid_nr(current), current->comm);
++
+ 		/* Show the handler the original registers. */
+ 		syscall_rollback(current, current_pt_regs());
+ 		/* Let the filter pass back 16 bits of data. */
+@@ -1288,6 +1293,11 @@ static int __seccomp_filter(int this_syscall, const struct seccomp_data *sd,
+ 
+ 	case SECCOMP_RET_KILL_THREAD:
+ 	case SECCOMP_RET_KILL_PROCESS:
++		pr_warn_ratelimited("DSDBG_SECCOMP: nr=%d arch=0x%x action=0x%x pid=%d comm=%s\n",
++				    sd->nr, sd->arch, action,
++				    task_pid_nr(current), current->comm);
++		fallthrough;
++
+ 	default:
+ 		current->seccomp.mode = SECCOMP_MODE_DEAD;
+ 		seccomp_log(this_syscall, SIGSYS, action, true);
+
