@@ -15,7 +15,9 @@ The candidate enables PID/IPC namespaces, SYSVIPC, devtmpfs, user namespaces, IP
 
 ## Verification status
 
-Static verification passed for the embedded configuration, AVB packaging, selected BTF layouts, 449 captured vendor/system modules, and 59 signed system modules. The image was **not boot-tested** in this public snapshot, and no real container workload was started. Read `verification/` and the research documents for exact scope and limitations.
+Static verification passed for the embedded configuration, AVB packaging, selected BTF layouts, 449 captured vendor/system modules, and 59 signed system modules. The candidate was also booted and used on a Meizu 21 Pro running the current PixelOS setup on October 20, 2026, with no problems reported during the real-device validation. This runtime result is user-reported and is recorded separately from the automated static reports; the generated reports intentionally retain their original `boot_tested: false` metadata. Read `verification/` and the research documents for exact scope and limitations.
+
+The candidate does not enable `CONFIG_CFS_BANDWIDTH` or `CONFIG_CGROUP_PIDS`. These options remain unavailable because enabling them changes the GKI ABI and breaks the captured vendor modules without a complete module rebuild. See `verification/runtime-validation-20261020.md` for the runtime validation record.
 
 The native probe in `tests/kernel_probe` is a root-only aarch64 smoke test for namespaces, SYSVIPC, seccomp, and devtmpfs registration. It was run against the stock kernel as a negative baseline; run it again after booting a candidate.
 
