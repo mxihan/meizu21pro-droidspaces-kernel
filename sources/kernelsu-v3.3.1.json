@@ -1,0 +1,26 @@
+{
+  "assets": [
+    {
+      "browser_download_url": "https://github.com/tiann/KernelSU/releases/download/v3.3.1/ksud-x86_64-unknown-linux-musl",
+      "digest": "sha256:29b50f946a3cc40b04aef3dd587adad227fe0f70edf9c56b02c84479f0b0e954",
+      "name": "ksud-x86_64-unknown-linux-musl",
+      "size": 8055080
+    },
+    {
+      "browser_download_url": "https://github.com/tiann/KernelSU/releases/download/v3.3.1/ksuinit-aarch64",
+      "digest": "sha256:365c66e5435a9ecdb3dbb23ceda2d9253568defeee3682af95220087094eff5d",
+      "name": "ksuinit-aarch64",
+      "size": 603008
+    },
+    {
+      "browser_download_url": "https://github.com/tiann/KernelSU/releases/download/v3.3.1/lkm-aarch64-android14-6.1_kernelsu.ko",
+      "digest": "sha256:27d45be86a68e03aa9d8e103fe229c66245f5c3ddccd236e52272131ad156f0e",
+      "name": "lkm-aarch64-android14-6.1_kernelsu.ko",
+      "size": 413296
+    }
+  ],
+  "published_at": "2026-10-12T22:52:06Z",
+  "tag_name": "v3.3.1",
+  "source_repository": "https://github.com/tiann/KernelSU",
+  "source_commit": "0c0fdb960178fa12d80d6cbcfdcb6ad8be6a865d"
+}

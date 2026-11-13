@@ -23,6 +23,12 @@ The native probe in `tests/kernel_probe` is a root-only aarch64 smoke test for n
 
 ## Build and test
 
+The PixelOS 17 integration validated on November 13, 2026 is documented in
+[the device build guide](docs/pixelos17-build.md). It includes the two rebuilt
+IR modules, official KernelSU v3.3.1 LKM inputs, source provenance, and a
+preparation script for the matching PixelOS base images. The manifest entry
+point is `mxihan/android_manifest` branch `meizu21pro-droidspaces`.
+
 The repository intentionally does not include the full Qualcomm kernel source, Android toolchains, phone partition backups, or private signing keys. Obtain the pinned sources and toolchain separately, then adapt the paths in the scripts for the local environment. The provenance files and source assessment document record the required commits.
 
 Before flashing any boot image, verify the device, active slot, bootloader state, ROM build, AVB policy, and a tested recovery path. Keep the original boot and init_boot backups outside this repository.

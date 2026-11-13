@@ -3,4 +3,10 @@ artifacts/Image binary
 artifacts/boot-droidspaces-meizu21pro-avb.img binary
 artifacts/* linguist-generated
 scripts/*.patch linguist-language=Diff
+*.py text eol=lf
+*.sh text eol=lf
+*.config text eol=lf
+*.symvers text eol=lf
+*.symvers whitespace=-blank-at-eol
+artifacts/pixelos17/kernelsu/LICENSE text eol=lf
 

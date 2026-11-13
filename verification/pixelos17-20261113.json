@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "nr_thresholds": [
+    -125,
+    -115,
+    -105,
+    -95
+  ],
+  "wifi_thresholds": [
+    -88,
+    -77,
+    -66,
+    -55
+  ],
+  "all_249_original_carrier_groups_preserved": true,
+  "carrierconfig_cache_version_updated": true,
+  "voip_both_two_microphones_and_endfire_aec_ns": true,
+  "ir_permission_and_supported_carriers_in_vendor": true,
+  "vendor_init_ir_carrier_property_write_permission_verified": true,
+  "published_droidspaces_kernel_image_preserved": true,
+  "rebuilt_ir_modules_in_vendor_boot_and_vendor_dlkm": true,
+  "kernelsu_lkm_and_original_init_verified": true,
+  "android_init_matches_current_build": true,
+  "dtbo_device_tree_verified": true,
+  "avb_verified": true,
+  "updater_included": false,
+  "kernelsu_manager_included": false,
+  "new_rom_boot_tested": true,
+  "ir_end_to_end_tested": true,
+  "native_ir_worker_boot_verified": true,
+  "ir_carrier_property_boot_verified": true,
+  "release_zip_sha256": "19979bf9f96c05e14e85dd03a63c43202fd6a86da0420417c70a380bd3b17276",
+  "release_incremental": "1794511064",
+  "security_patch": "2026-11-01",
+  "android_sdk": 37,
+  "ir_timing": {
+    "packets": 6,
+    "intervals": 90,
+    "requested_interval_us": 500,
+    "minimum_interval_us": 472,
+    "maximum_interval_us": 531,
+    "median_absolute_error_us": 2.0,
+    "p95_absolute_error_us": 25,
+    "maximum_absolute_error_us": 31,
+    "intervals_over_10_percent_error": 0,
+    "pinctrl_call_median_us": 21.0,
+    "pinctrl_call_maximum_us": 50
+  },
+  "user_validation": {
+    "voip": "Handset and speaker capture both normal with suitable level",
+    "ir": "Matched LG configuration works with one response per tap after correcting repeated complete NEC frames in the app data"
+  }
+}

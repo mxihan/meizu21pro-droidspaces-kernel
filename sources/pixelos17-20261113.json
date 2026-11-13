@@ -1,0 +1,57 @@
+{
+  "base_package": "PixelOS_meizu21Pro-17.0-20260928-0803.zip",
+  "pixelos_manifest_commit": "29f6010bcd2bd4742502ea7ccee763c64f02a3c1",
+  "published_image_commit": "6546ec0cb942798da5ec35d7c80cf0825032ac83",
+  "kernel_source_repository": "https://github.com/mxihan/android_kernel_meizu_sm8650",
+  "kernel_source_commit": "ddd872579d674cdd74033a30d37cd8de1286f5f3",
+  "kernel_release": "6.1.176-g19e9b13339e2",
+  "kernel_compiler": "Android Clang 22.0.2 r596125 (15071444)",
+  "base_fingerprint": "meizu/custom_meizu21Pro/meizu21Pro:17/CP2A.260605.016/eng.guosas:userdebug/test-keys",
+  "vendor_boot_avb_salt": "d907c36da66bf9c04f940df1e87ff23d3f1f73f9cde77f022b5f5e66e0ff7113",
+  "vendor_dlkm_avb_salt": "82b70e0d43fc35393e923ecfe56c0e4f1aaf0a97a131e8ff9c0847c3f6f24ac2",
+  "vendor_dlkm_uuid": "681408e9-155f-469a-bf2e-90a24d216ee2",
+  "erofs_version": "1.8.3",
+  "base_images": {
+    "vendor_boot.img": {
+      "original_name": "PixelOS-17.0-20260928-vendor_boot.img",
+      "sha256": "8c6bc305693a37263557907877408690d52e0edf4e6de03da09ad274d6a62b03"
+    },
+    "vendor_dlkm.img": {
+      "original_name": "PixelOS-17.0-20260928-vendor_dlkm.img",
+      "sha256": "e9e7939c1868657a70c44597b23db13a7cbe15f5457fc77e9f6c0bbfffcde591"
+    },
+    "system_dlkm.img": {
+      "original_name": "PixelOS-17.0-20260928-system_dlkm.img",
+      "sha256": "473dc1b2fb6e374967d231fa7521d906212d5ad076e7bb8c3fa5f1844ea8720f"
+    },
+    "dtbo.img": {
+      "original_name": "PixelOS-17.0-20260928-dtbo.img",
+      "sha256": "32a0245f1c87a8be9081fdfc9b9ae469b4addeaa14c7f693389761ef626a8605"
+    }
+  },
+  "public_assets": {
+    "artifacts/Image": "7f8d7ed65ef5a636c11b952bbcdb534d7bf84cff6ffd17504b3e9fc27fb8a6d1",
+    "artifacts/kernel.config": "7d26d81fb9c398851b38cc795a5abf3d7e16c292ce1c188fa18edb50e7b1b436",
+    "artifacts/pixelos17/core.symvers": "4046401c08ac81d5d42207185880c1a0b024d5806b7f7c2ad082a1971112a304",
+    "artifacts/pixelos17/ir-modules/gcc-pineapple.ko": "c7392a2da53eb67326f8a176b81d2d16ab2c81922dd9e921a16fa405feb40add",
+    "artifacts/pixelos17/ir-modules/pwm-ir-tx.ko": "5adc476f43137d6ada1d817624d29e8554eeda71903414747360279e30b6c962",
+    "artifacts/pixelos17/kernelsu/LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "artifacts/pixelos17/kernelsu/kernelsu.ko": "27d45be86a68e03aa9d8e103fe229c66245f5c3ddccd236e52272131ad156f0e",
+    "artifacts/pixelos17/kernelsu/ksud": "29b50f946a3cc40b04aef3dd587adad227fe0f70edf9c56b02c84479f0b0e954",
+    "artifacts/pixelos17/kernelsu/ksuinit": "365c66e5435a9ecdb3dbb23ceda2d9253568defeee3682af95220087094eff5d",
+    "scripts/patch_init_boot_kernelsu.py": "1dd4ad501c1b8294be19bb71f5b52e3f2f3114c0da4993da661c66f55ad63d2b"
+  },
+  "prepared_files": {
+    "Image": "7f8d7ed65ef5a636c11b952bbcdb534d7bf84cff6ffd17504b3e9fc27fb8a6d1",
+    "kernel.config": "7d26d81fb9c398851b38cc795a5abf3d7e16c292ce1c188fa18edb50e7b1b436",
+    "vendor_boot.img": "b87fbfff78b4aa0fedbab9204f6d296801e8da1370eb054fa1202a758b10afeb",
+    "vendor_dlkm.img": "367717c27ccdb8bd7a34f188ff44bbc2b63a7888f2c2a2c90f17c0ca051a776b",
+    "system_dlkm.img": "473dc1b2fb6e374967d231fa7521d906212d5ad076e7bb8c3fa5f1844ea8720f",
+    "dtbo.img": "32a0245f1c87a8be9081fdfc9b9ae469b4addeaa14c7f693389761ef626a8605",
+    "dtb/stock.dtb": "0b84f499c8410887d75686fe14b0c4926be9c31147d269e2196fdd77851941c1",
+    "kernelsu/ksud": "29b50f946a3cc40b04aef3dd587adad227fe0f70edf9c56b02c84479f0b0e954",
+    "kernelsu/ksuinit": "365c66e5435a9ecdb3dbb23ceda2d9253568defeee3682af95220087094eff5d",
+    "kernelsu/kernelsu.ko": "27d45be86a68e03aa9d8e103fe229c66245f5c3ddccd236e52272131ad156f0e",
+    "kernelsu/patch_init_boot_kernelsu.py": "1dd4ad501c1b8294be19bb71f5b52e3f2f3114c0da4993da661c66f55ad63d2b"
+  }
+}

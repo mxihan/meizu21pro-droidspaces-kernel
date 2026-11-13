@@ -27,6 +27,8 @@ out/
 !artifacts/Image
 !artifacts/kernel.config
 !artifacts/SHA256SUMS.txt
+!artifacts/pixelos17/ir-modules/*.ko
+!artifacts/pixelos17/kernelsu/kernelsu.ko
 !verification/stock-module-signing.pem
 !verification/stock-module-signing.x509
 
