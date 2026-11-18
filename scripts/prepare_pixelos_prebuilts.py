@@ -64,11 +64,50 @@ def write_cpio(entries):
     return result
 
 
+def read_goodix_replacement(path, entries):
+    from verify_module_abi import parse_module
+
+    modules = {name: contents for name, _, contents in entries}
+    goodix_name = 'lib/modules/goodix_ts.ko'
+    original = parse_module(Path(goodix_name), modules[goodix_name])
+    data = path.read_bytes()
+    replacement = parse_module(path, data)
+    if original['parse_errors'] or replacement['parse_errors']:
+        raise ValueError('Invalid Goodix kernel module')
+    for key in ('module_name', 'vermagic', 'exports'):
+        if replacement[key] != original[key]:
+            raise ValueError(f'Goodix module has incompatible {key}')
+    for key in ('alias', 'depends'):
+        if replacement['modinfo'].get(key) != original['modinfo'].get(key):
+            raise ValueError(f'Goodix module has incompatible {key}')
+
+    exports = {}
+    for line in (REPOSITORY / 'artifacts/pixelos17/core.symvers').read_text().splitlines():
+        if line:
+            crc, name, *_ = line.split()
+            exports[name] = crc
+    for name in ('panel_event_notifier', 'qts'):
+        module_path = Path(f'lib/modules/{name}.ko')
+        dependency = parse_module(module_path, modules[str(module_path)])
+        if dependency['parse_errors']:
+            raise ValueError(f'Invalid dependency module {module_path}')
+        exports.update((symbol, export['crc'])
+                       for symbol, export in dependency['exports'].items())
+    for name, crc in replacement['versions'].items():
+        if exports.get(name) != crc:
+            raise ValueError(f'Goodix module has incompatible CRC for {name}')
+    if replacement['unversioned_strong_imports'] != original['unversioned_strong_imports']:
+        raise ValueError('Goodix module has different unversioned imports')
+
+    return data
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--android-root', type=Path, required=True)
     parser.add_argument('--base-images', type=Path, required=True)
     parser.add_argument('--output', type=Path)
+    parser.add_argument('--touch-module', type=Path, help='Compatible rebuilt goodix_ts.ko')
     args = parser.parse_args()
     build = args.android_root.resolve()
     output = (args.output or build / 'device/meizu/meizu21Pro/droidspaces-prebuilt').resolve()
@@ -118,11 +157,21 @@ def main():
         if boot_args.count('--vendor_ramdisk_fragment') != 1:
             raise ValueError('Expected one vendor ramdisk fragment')
         entries = read_cpio(run('lz4', '-dc', unpacked / 'vendor_ramdisk00'))
+        module_replacements = {
+            name: (REPOSITORY / 'artifacts/pixelos17/ir-modules' / name).read_bytes()
+            for name in ('gcc-pineapple.ko', 'pwm-ir-tx.ko')
+        }
+        if args.touch_module:
+            module_replacements['goodix_ts.ko'] = read_goodix_replacement(
+                args.touch_module, entries)
+        ramdisk_replacements = {
+            f'lib/modules/{name}': contents for name, contents in module_replacements.items()
+        }
         changed = set()
         modified = []
         for name, fields, contents in entries:
-            if name in ('lib/modules/gcc-pineapple.ko', 'lib/modules/pwm-ir-tx.ko'):
-                contents = (REPOSITORY / 'artifacts/pixelos17/ir-modules' / Path(name).name).read_bytes()
+            if name in ramdisk_replacements:
+                contents = ramdisk_replacements[name]
                 changed.add(name)
             if name == 'lib/modules/modules.load':
                 lines = contents.decode().splitlines()
@@ -135,7 +184,7 @@ def main():
             fields = fields.copy()
             fields[6] = len(contents)
             modified.append((name, fields, contents))
-        if changed != {'lib/modules/gcc-pineapple.ko', 'lib/modules/pwm-ir-tx.ko', 'lib/modules/modules.load'}:
+        if changed != ramdisk_replacements.keys() | {'lib/modules/modules.load'}:
             raise ValueError(f'Unexpected vendor ramdisk changes: {changed}')
         raw = work / 'vendor_ramdisk.cpio'
         raw.write_bytes(write_cpio(modified))
@@ -162,9 +211,11 @@ def main():
 
         tree = work / 'vendor_dlkm-tree'
         run(tools / 'fsck.erofs', '--extract=' + str(tree), inputs['vendor_dlkm.img'])
-        for name in ('gcc-pineapple.ko', 'pwm-ir-tx.ko'):
-            shutil.copyfile(REPOSITORY / 'artifacts/pixelos17/ir-modules' / name,
-                            tree / 'lib/modules' / name)
+        for name, contents in module_replacements.items():
+            module_path = tree / 'lib/modules' / name
+            if not module_path.is_file():
+                raise FileNotFoundError(module_path)
+            module_path.write_bytes(contents)
         paths = [tree] + sorted(tree.rglob('*'))
         config = work / 'vendor_dlkm.fs_config'
         config.write_text('/ 0 0 0755 capabilities=0x0\n' + ''.join(
@@ -187,10 +238,14 @@ def main():
             '--prop', 'com.android.build.vendor_dlkm.fingerprint:' + lock['base_fingerprint'])
         for image in (vendor_boot, dlkm):
             run(sys.executable, avbtool, 'verify_image', '--image', image)
-        for relative, expected in lock['prepared_files'].items():
+        expected_files = dict(lock['prepared_files'])
+        if args.touch_module:
+            for name in ('vendor_boot.img', 'vendor_dlkm.img'):
+                expected_files[name] = digest(staged / name)
+        for relative, expected in expected_files.items():
             check_digest(staged / relative, expected)
         if output.exists():
-            for relative, expected in lock['prepared_files'].items():
+            for relative, expected in expected_files.items():
                 check_digest(output / relative, expected)
         else:
             staged.rename(output)

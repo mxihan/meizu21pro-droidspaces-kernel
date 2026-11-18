@@ -44,6 +44,27 @@ installing `device/meizu/meizu21Pro/droidspaces-prebuilt/`. Repeated runs
 verify an existing matching directory. `--output` selects another directory
 for checking generated files.
 
+For a build with the Meizu touch sampling rate tile, use the M2481
+`goodix_ts.ko` built from commit `a7252cea545510034cb8f4d459ce43541f698edc`
+with kernel commit `ddd872579d674cdd74033a30d37cd8de1286f5f3` and Android
+Clang `r596125`.
+[Goodix driver source](https://github.com/mxihan/vendor_qcom_opensource_touch-drivers/commit/a7252cea545510034cb8f4d459ce43541f698edc)
+
+Pass the rebuilt module to the preparation script and stage the inputs in a
+new directory. The script checks the module against the pinned kernel and
+the `panel_event_notifier` and `qts` export CRCs, then installs it into
+`vendor_boot` and `vendor_dlkm`.
+
+```bash
+python3 prebuilts/meizu/droidspaces/scripts/prepare_pixelos_prebuilts.py \
+  --android-root "$PWD" --base-images /path/to/base-images \
+  --touch-module /path/to/goodix_ts.ko --output /path/to/prepared-touch
+```
+
+Use the staged inputs as the device's `droidspaces-prebuilt` directory. The
+stripped module used for the verified OTA has SHA-256
+`14a1916ab567987977aea9f07401375bdaf605883fd76d55c64075a4b1013902`.
+
 The build regenerates Android init and applies KernelSU before AVB signing.
 The Android build fork also carries this patched init_boot into target-files
 so OTA packaging preserves its ramdisk. KernelSU Manager is installed
